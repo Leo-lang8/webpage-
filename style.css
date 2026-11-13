@@ -1,0 +1,573 @@
+
+/* GENERAL SETTINGS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(13deg, #16274f, #270e27);
+     min-height: 100vh;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+/* NAVIGATION */
+nav {
+    background:  hwb(300 8% 85%);
+    padding:20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #c338f8;
+}
+
+nav ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+nav a {
+    color: hwb(0 100% 0%);
+    text-decoration: none;
+    font-size: 8px;
+    transition: 0.5s;
+}
+
+nav a:hover {
+    color: #9410b7;
+   transform: translateY(-5px);
+  text-shadow:
+        0 0 10px #d9a2f7,
+        0 0 25px #cd2ef4;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 85vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero h1 {
+    font-size: clamp(36px, 7vw, 60px);
+    line-height: 1.15;
+    margin: 15px 0;
+}
+
+.hero h1 span {
+    color: #b70fde;
+}
+
+.hero p {
+    color: #94a3b8;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.tag {
+    color: #bf38f8;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.button {
+    display: inline-block;
+    background: #c302c7;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+
+  
+}
+
+.button:hover {
+    background: #a1038f;
+    transform: translateY(-3px);
+
+  
+}
+
+/* GENERAL SECTIONS */
+.section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.section-title span {
+    color: #b427e7;
+}
+.section-title span2 {
+    color: #279be7;
+}
+.description {
+    color: #94a3b8;
+    max-width: 700px;
+}
+
+
+/* SKILLS */
+.hobbys {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+
+
+
+
+
+.hobby-card {
+    background: rgba(27, 54, 74, 0.14901960784313725);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 25px;
+    border: 1px solid #483355;
+    border-radius: 10px;
+    transition: 0.3s;
+
+  box-shadow:
+        0 0 5px #b400ff,
+        0 0 15px rgba(248, 0, 255, 0.4);
+}
+
+.hobby-card i {
+    font-size: 30px;
+    color: #9525eb;
+    margin-bottom: 10px;
+  text-shadow: 0 0 8px #a200ff;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    border-color: #b950ec;
+
+  box-shadow:
+        0 0 10px #9b00ff,
+        0 0 25px #c000ff;
+}
+
+.hobby-card h3 {
+    color: #a238f8;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px #bc00ff;
+}
+
+.hobby-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* PROJECTS */
+.likes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.like-card {
+     background: rgba(27, 54, 74, 0.14901960784313725);
+     
+     transition: 0.3s;
+  
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid #af38e9;
+
+   box-shadow:
+        0 0 5px #a600ff,
+        0 0 15px rgba(192, 0, 255, 0.4);
+}
+
+.like-card i {
+    font-size: 30px;
+    color: #a125eb;
+    margin-bottom: 10px;
+  text-shadow: 0 0 2px #e300ff;
+}
+
+  .like-card:hover {
+    transform: translateY(-10px);
+    border-color: #a022ba;
+    box-shadow:
+        0 0 5px #be00ff,
+        0 0 15px #d400ff;
+  }
+
+.like-card h3 {
+    margin-bottom: 10px;
+    color: #d838f8;
+    text-shadow: 0 0 10px #ff00fe;
+}
+
+.like-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+/* CONTACT */
+.dislikes {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 20px;
+   margin-top: 30px;
+}
+
+.dislike-card {
+    background: rgba(40, 87, 134, 0.14901960784313725);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1000px);
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(30, 43, 219, 0.30196078431372547);
+    color: white;
+    box-shadow:
+        0 0 5px #00e5ff,
+        0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+
+  .dislike-card i {
+    font-size: 30px;
+    color: #2563eb;
+    margin-bottom: 10px;
+  text-shadow: 0 0 1px #00e5ff;
+  
+  }
+  
+
+.dislike-card:hover {
+    transform: translateY(-10px);
+    border-color: #2232ba;
+
+  box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px hwb(200 45% 3%)
+}
+
+.dislike-card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.dislike-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+.photos {
+    display: grid;
+    grid-template-columns: repeat(1, 2fr);
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.photo-card {
+    background: hwb(240 11% 76%);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid #334155;
+    width: 300px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(165, 10, 10, 0.2);
+   transition: 0.3s;
+    
+}
+.photo-card:hover {
+    transform: translateY(-10px);
+    border-color: #2232ba;
+
+  box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px hwb(200 45% 3%)
+}
+.photo-card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.photo-card p {
+    color: #94a3b8;
+    font-size: 20px;
+}
+.photo-card img{
+  height: 250px;
+  width: 250px;
+  border: 5px solid #334155;
+  object-fit: cover;
+  display: block;
+}
+
+.websites {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+   margin-top: 30px;
+}
+
+.website-card {
+    background: rgba(40, 87, 134, 0.14901960784313725);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(1000px);
+    transition: 0.5s;
+    border-radius: 10px;
+    padding: 25px;
+    border: 1px solid rgba(30, 43, 219, 0.30196078431372547);
+    color: white;
+     grid-template-columns: repeat(5, 1fr);
+    box-shadow:
+        0 0 5px #00e5ff,
+        0 0 15px rgba(0, 229, 255, 0.4);
+}
+
+
+  .website-card i {
+    font-size: 30px;
+    color: #1b1ebc;
+    margin-bottom: 10px;
+  text-shadow: 0 0 1px #00e5ff;
+  
+  }
+  .website-card li{
+    font-size: 20px;
+    color: hwb(247 67% 5%);
+  }
+
+.website-card:hover {
+    transform: translateY(-10px);
+    border-color: #2232ba;
+
+  box-shadow:
+        0 0 10px #00e5ff,
+        0 0 25px hwb(200 45% 3%)
+}
+
+.website-card h3 {
+    margin-bottom: 10px;
+    color: #38bdf8;
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+.dislike-card p {
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+
+
+/* FOOTER */
+footer {
+    background: #111c32;
+    text-align: center;
+    padding: 25px;
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 650px) {
+    .nav-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hobbys,
+    .likes {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+}
+
+
+#theme-toggle {
+    background: #b902c7;
+    color: white;
+    border: none;
+    padding: 5px 2px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto 0 0;
+}
+
+#theme-toggle:hover {
+    background: #0356a1;
+    
+}
+
+/* LIGHT MODE */
+body.light-mode {
+    background: linear-gradient(15deg, #f4cffd, #bde0fa);;
+    color: #4c5a7d;
+}
+
+body.light-mode nav {
+    background: #c4dbfb;
+}
+body.light-mode .website-card,
+
+body.light-mode .dislike-card,
+body.light-mode .photo-card {
+   background: rgba(161, 208, 248, 0.14901960784313725);
+   border-color: #a99df5;
+  backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+}
+body.light-mode .hobby-card,
+body.light-mode .like-card{
+background: rgba(161, 208, 248, 0.14901960784313725);
+   border-color: #9dd3f5;
+  backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(100px);
+  box-shadow:
+        0 0 5px #0086ff,
+        0 0 15px rgba(0, 225, 255, 0.4);
+}
+
+body.light-mode nav a {
+    color: #0f172a;
+}
+
+body.light-mode nav a:hover {
+    color: #87acf5;
+   transform: translateY(-5px);
+  text-shadow:
+        0 0 10px #a2d0f7,
+        0 0 25px #2e53f4;
+  
+}
+
+body.light-mode .button {
+    display: inline-block;
+    background: #0220c7;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: 0.3s;
+
+  
+}
+body.light-mode .hobby-card i,
+body.light-mode .photo-card i,
+body.light-mode .like-card i,
+body.light-mode .dislike-card i,
+body.light-mode .hobby-card p,
+body.light-mode .photo-card p,
+body.light-mode .like-card p,
+body.light-mode .dislike-card p,
+body.light-mode .description,
+body.light-mode .hero h1,
+body.light-mode .hero p {
+    color: hwb(247 17% 69%);
+  text-shadow: none;
+}
+body.light-mode .like-card h3,
+body.light-mode .section-title span,
+body.light-mode .hobby-card h3,
+body.light-mode .hero h1 span {
+    color: #0872ff;
+   text-shadow: none;
+}
+
+body.light-mode .logo {
+    color: #0071f7;
+}
+body.light-mode .photo-card img{
+   height: 250px;
+  width: 250px;
+  border: 5px solid rgba(242, 161, 248, 0.14901960784313725);
+  object-fit: cover;
+  display: block;
+}
+body.light-mode .hobby-card:hover,
+body.light-mode .like-card:hover{
+    transform: translateY(-10px);
+    border-color: #2277ba;
+
+  box-shadow:
+        0 0 10px #00a6ff,
+        0 0 25px hwb(180 45% 3%)
+}
+
+body.light-mode .dislike-card:hover,
+body.light-mode .website-card:hover,
+body.light-mode .photo-card:hover {
+    transform: translateY(-10px);
+    border-color: #a922ba;
+
+  box-shadow:
+        0 0 10px #ce00ff,
+        0 0 25px hwb(288 45% 3%)
+}
+ body.light-mode .website-card,
+ body.light-mode .dislike-card{
+   box-shadow:
+        0 0 5px #c100ff,
+        0 0 15px rgba(175, 0, 255, 0.4);
+ }
+
+  body.light-mode footer{
+  background: #f6c8f6;
+    color: #4d3359;
+}
+body.light-mode .dislike-card h3,
+body.light-mode .website-card i,
+body.light-mode .photo-card h3,
+body.light-mode .section-title span2 {
+    color: #b027e7;
+  text-shadow: none;
+}
